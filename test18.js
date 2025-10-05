@@ -17,4 +17,4 @@ function wow(p1, p2, p3, p4){
     console.log('----------------')
 }
  
-wow("Sombat", showHello , hi, ()=>{ console.log('Ei ei')} )
+wow("Sombat...", showHello , hi, ()=>{ console.log('Ei ei')} )
