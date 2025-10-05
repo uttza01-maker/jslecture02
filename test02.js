@@ -1,21 +1,32 @@
 // Identifire คือ ชื่อที่dev ตั้งขึ้นมาเอง(ตัวแปร ฟังชั่น ค่าคงที่ คลาส ออปเจ็ต)
-// -ไมเว้นวรรค ไม่ขึ้นด้วยตัวเลข  ไม่ใช้คำสงวน/สำคัญ(reserved word/yword
-// ไม่ใ้สัญลักษณ์ พิเศษ ยกเว้น$ _
-// ควรตั้งเป็น pascal cese camel snake cese
-//  stuedenscore
-// code blok
-// veriable ตัวแปร คือ ชื่อที่devตั้งขึ้นมาเอง  เอาไว้เก็บข้อมูลที่เกิดขึ้นในโปรแกรม
-var dti01='aaa'  //แก้ไขได้
-let dti02 ='bbb'//แก้ไขได้
-const dti03='ccc'//แก้ไขไม่ได้
+// -ไมเว้นวรรค ไม่ขึ้นด้วยตัวเลข  ไม่ใช้คำสงวน/สำคัญ(reserved word/keyword)
+// ไม่ใช้สัญลักษณ์ พิเศษ ยกเว้น $ _
+// ควรตั้งเป็น pascal case, camel case, snake case
 
-dti01='111'
-dti02='222'
-// dti03='333'
+// variable ตัวแปร คือ ชื่อที่devตั้งขึ้นมาเอง  เอาไว้เก็บข้อมูลที่เกิดขึ้นในโปรแกรม
+var dti01 = 'aaa';  // แก้ไขได้
+let dti02 = 'bbb'; // แก้ไขได้
+const dti03 = 'ccc'; // แก้ไขไม่ได้
+
+dti01 = '111';
+dti02 = '222';
+// dti03 = '333'; // ถ้าเปิดใช้งานบรรทัดนี้จะ Error เพราะ const แก้ไขค่าไม่ได้
+
+// --- ส่วนที่แก้ไข ---
+// ประกาศตัวแปร dti04, dti05, dti06 ไว้นอก block
+// เพื่อให้ console.log ด้านล่างสุดสามารถเรียกใช้งานได้
+var dti04;
+let dti05;
+const dti06 = 'fff'; // const ต้องกำหนดค่าตอนประกาศเสมอ
+
 {
-    var dti04 = 'ddd'
-    let dti05 ='eee'
-    const dti06 = 'fff'
-    console.log (dti01,dti02,dti03,dti04,dti05,dti06)
+    // เข้ามากำหนดค่าให้ตัวแปรภายใน block
+    dti04 = 'ddd';
+    dti05 = 'eee';
+    
+    // console.log ตัวแรกจะแสดงผลได้ทั้งหมด เพราะอยู่ใน scope ที่ถูกต้อง
+    console.log('ข้างใน block:', dti01, dti02, dti03, dti04, dti05, dti06);
 }
-console.log (dti01,dti02,dti03,dti04,dti05,dti06)
+
+// console.log ตัวนี้ก็จะทำงานได้แล้ว เพราะตัวแปรทั้งหมดถูกประกาศใน scope นอกสุด
+console.log('ข้างนอก block:', dti01, dti02, dti03, dti04, dti05, dti06);

@@ -41,4 +41,12 @@ data2++
 ++data2
 data2++
 console.log(data2) // 13
- 
+
+// nullish coalescing operator ?? ใช้ตรวจสอบ nullหรือไม่
+let aa = null 
+let bb 
+let cc = 'DTI-SAU'
+console.log('........')
+console.log(aa ?? 'Hello')
+console.log(bb ?? 'HI') 
+console.log(cc ?? 'Hey')

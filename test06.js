@@ -1,14 +1,13 @@
-// if-else-if พิสูจน์หลายครั้ง
-let score = 50
+let score = 20
 
-if(score >= 80){
+if(score >= 80){ // 50 >= 80 (False)
     console.log ('A')
- }eles if (score => 70){
+} else if (score >= 70){ // 50 >= 70 (False)
     console.log('B')
-}eles if (score => 60){
+} else if (score >= 60){ // 50 >= 60 (False)
     console.log('C')
-}eles if (score => 50){
-    console.log('D')
-}eles if (score => 40){
+} else if (score >= 50){ // 50 >= 50 (True)
+    console.log('D') // This would be the output: 'D'
+} else if (score >= 40){ 
     console.log('F')
 }
